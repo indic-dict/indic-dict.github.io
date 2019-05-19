@@ -24,9 +24,9 @@ function getCollapseStyle(jsIncludeJqueryElement) {
 function getShabdaLinkRelative(shabdaId, resourceType) {
     let shabdaPaada = shabdaId.split(".").slice(0,2).join(".");
     if (resourceType == "txt") {
-        return `${shabdaId}.txt`
+        return `/${shabdaId}.txt`
     } else {
-        return `${shabdaId}.md`;
+        return `/${shabdaId}.md`;
     }
 }
 
