@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+    <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    {{ .Hugo.Generator }}
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+    {{ if .RSSLink }}
+      <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+      <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+
+    {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
+    {{- template "_internal/opengraph.html" . -}}
+    {{- template "_internal/google_news.html" . -}}
+    {{- template "_internal/schema.html" . -}}
+    {{- template "_internal/twitter_cards.html" . -}}
+
+    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+      {{ template "_internal/google_analytics_async.html" . }}
+    {{ end }}
+
+
+      {{ partialCached "hugo-site-vars-to-js-general.html" .}}
+    <script type="text/javascript">
+      // Note that we define page-specific variables below and not in a partial like hugo-site-vars-to-js-general.html. Reason: Hugo builds this partial just once and includes it everywhere.
+      let pageSource = "{{.File.Path}}";
+      let pageParams = JSON.parse("{{.Page.Params | jsonify}}");
+      console.log(pageSource);
+
+    </script>
+    <script src="{{ relURL "dist/main-bundle.js" }}"></script>
+    <script src="{{ relURL "dist/ui_lib-bundle.js" }}"></script>
+
+    <link rel="stylesheet" href="{{ relURL "css/@fortawesome/fontawesome-free/css/solid.min.css" }}">
+    <link rel="stylesheet" href="{{ relURL "css/@fortawesome/fontawesome-free/css/fontawesome.min.css" }}">
+
+  </head>
+
+  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+
+    {{ block "header" . }}{{ partialCached "site-header.html" .}}{{ end }}
+    <main class="container p-3" role="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+  </body>
+</html>

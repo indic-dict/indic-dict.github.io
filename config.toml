@@ -1,0 +1,12 @@
+baseURL = "https://indic-dict.github.io/"
+languageCode = "en-us"
+title = "शब्दकोशः"
+theme = "shabdakosha"
+publishDir = "build_github"
+enableGitInfo = true
+# The below wont work as of 201903 - see https://github.com/gohugoio/hugo/pull/5649
+#ignoreFiles = [ "\\.git.*" ]
+[params]
+  githubEditMePathBase = "https://github.com/indic-dict/indic-dict.github.io/edit/master/"
+  env = "production"
+

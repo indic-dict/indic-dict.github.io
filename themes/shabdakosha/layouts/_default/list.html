@@ -1,0 +1,22 @@
+{{ define "main" }}
+<!--Note that this template is used for sections as well as taxonomies.-->
+<main>
+  <article class="col-xs-12 card mt-2">
+    <header>
+      <h2 id="shabdaHeading" class="card-title  border  d-flex justify-content-between">
+        {{ .Params.type }}
+        {{ .Title }}
+      </h2>
+    </header>
+    <div id="contentDiv" class="card-body nested-links nested-img mid-gray">
+      {{ .Content }}
+    </div>
+    <div class="css-treeview box">
+      
+      {{ range sort (.Pages.ByTitle) }}
+      {{partial "article-params-card" .}}
+      {{ end }}
+    </div>
+  </article>
+</main>
+{{ end }}
