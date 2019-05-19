@@ -2,9 +2,13 @@ import showdown from "showdown";
 
 var showdownConverter = new showdown.Converter();
 
+function getEditMePath() {
+    return "";
+}
+
 function getEditLinkHtml(includedPageUrl) {
     console.debug(includedPageUrl, getEditMePath(includedPageUrl));
-    return `<a class='btn btn-secondary' href='${getEditMePath(includedPageUrl)}'><i class="fas fa-edit"></i></a>`    
+    return `<a class='btn btn-secondary' href='${getEditMePath(includedPageUrl)}'><i class="fas fa-edit"></i></a>`;
 }
 
 function getCollapseStyle(jsIncludeJqueryElement) {
@@ -20,9 +24,9 @@ function getCollapseStyle(jsIncludeJqueryElement) {
 function getShabdaLinkRelative(shabdaId, resourceType) {
     let shabdaPaada = shabdaId.split(".").slice(0,2).join(".");
     if (resourceType == "txt") {
-        return `../../${shabdaId}.txt`
+        return `${shabdaId}.txt`
     } else {
-        return `../../${shabdaId}.md`;
+        return `${shabdaId}.md`;
     }
 }
 
@@ -85,7 +89,7 @@ function setMissingContentCard(error, includeElement) {
     let collapseStyle = getCollapseStyle(includeElement);
 
     console.warn("An error!", error);
-    var createLinkHtml = `<a class='btn btn-secondary' href='${getGithubCreationPath(includedPageUrl)}'><i class="fas fa-edit"></i></a>`;
+    var createLinkHtml = ``;
     var titleHtml = "";
     titleHtml = "<div class='card-title border d-flex justify-content-between'>" +
         `<div id='${title}' class="btn"><a data-toggle="collapse" href="#${title}_body" role="button" aria-expanded="true" aria-controls="${title}_body">${title}` +
