@@ -15,19 +15,20 @@ function loadShabdaDetailsHandler() {
     window.location = baseURL + `/shabda-details?shabda=${shabda}`;
 }
 
+import handleIncludes from "./handleIncludes";
+
 $( document ).ready(function() {
-    if (pageSource == "shabda-details.md") {
+    if (pageSource.endsWith("shabda-details.md")) {
         shabdaId = "अ";
         if (getQueryVariable("shabda")) {
             shabdaId = getQueryVariable("shabda");
         }
     }
+    document.getElementById("shabdaSearchInputBox").value = shabdaId
+    console.log(shabdaId);
     $("#shabdaSearchInputBox").change(loadShabdaDetailsHandler);
+    handleIncludes();
 });
-
-
-import handleIncludes from "./handleIncludes";
-$( document ).ready(handleIncludes);
 
 import {redirectToRandomPage, redirectToPage} from "./redirect";
 // So that these can be used like module_main.default.redirectToPage(..).

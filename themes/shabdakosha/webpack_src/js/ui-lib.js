@@ -6,5 +6,4 @@ import 'tachyons/css/tachyons.min.css';
 // import '@fortawesome/fontawesome-free/js/fontawesome';
 // import '@fortawesome/fontawesome-free/js/solid';
 
-import "../css/fonts.css";
 import "../css/external/treeview.css";

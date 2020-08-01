@@ -32,7 +32,8 @@ function getShabdaLinkRelative(shabdaId, resourceType) {
 
 function getIncludePageUrl(includeElement) {
     let resourceType = includeElement.attr("dataType");
-    return includeElement.attr("relativeUrlBase") + getShabdaLinkRelative(shabdaId, resourceType);
+    let url = includeElement.attr("relativeUrlBase");
+    return  includeElement.attr("relativeUrlBase") + getShabdaLinkRelative(shabdaId, resourceType);
 }
 
 async function getTextContentCard(responseHtml, includeElement) {
@@ -119,6 +120,7 @@ export default function handleIncludes() {
     if ($('.js_include').length == 0 ) { return; }
     return Promise.all($('.js_include').map(function() {
         var jsIncludeJqueryElement = $(this);
+        // console.log($(this).html());
         // The actual filling happens in a separate thread!
         return fillJsInclude(jsIncludeJqueryElement);
     }));
