@@ -10,6 +10,11 @@ function getQueryVariable(variable) {
     console.log('Query variable %s not found', variable);
 }
 
+function loadShabdaDetailsHandler() {
+    let shabda = $("#shabdaSearchInputBox").val();
+    window.location = baseURL + `/shabda-details?shabda=${shabda}`;
+}
+
 $( document ).ready(function() {
     if (pageSource == "shabda-details.md") {
         shabdaId = "अ";
@@ -17,6 +22,7 @@ $( document ).ready(function() {
             shabdaId = getQueryVariable("shabda");
         }
     }
+    $("#shabdaSearchInputBox").change(loadShabdaDetailsHandler);
 });
 
 
