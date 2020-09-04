@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>शब्दावली on शब्दकोशः</title>
+    <link>https://indic-dict.github.io/</link>
+    <description>Recent content in शब्दावली on शब्दकोशः</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://indic-dict.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://indic-dict.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://indic-dict.github.io/about/</guid>
+      <description>Intro Welcome! We are a few open source sanskrit programmers.
+Contributing Technical considerations  github.io is a convenient place to present the data (no money needed for server resources). The Jekyll static site generator is just too slow for data of this magnitude. Content is loaded from github.  Running off internet  clone the data repository within static subdirectory and point the attributes in the js_include tags in the details page to point to it.</description>
+    </item>
+    
+    <item>
+      <title>जालक्षेत्रमिदमन्विष्यताम्</title>
+      <link>https://indic-dict.github.io/google_site_search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://indic-dict.github.io/google_site_search/</guid>
+      <description>  (function() { var cx = &#39;003441740804712584864:bvledr2q0pc&#39;; var gcse = document.createElement(&#39;script&#39;); gcse.type = &#39;text/javascript&#39;; gcse.async = true; gcse.src = &#39;https://cse.google.com/cse.js?cx=&#39; + cx; var s = document.getElementsByTagName(&#39;script&#39;)[0]; s.parentNode.insertBefore(gcse, s); })();    </description>
+    </item>
+    
+    <item>
+      <title>शब्दनिर्वचनानि</title>
+      <link>https://indic-dict.github.io/shabda-details/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://indic-dict.github.io/shabda-details/</guid>
+      <description>  </description>
+    </item>
+    
+  </channel>
+</rss>
