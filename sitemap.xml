@@ -1,35 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://indic-dict.github.io/about/</loc>
-    <lastmod>2020-08-01T19:57:55+05:30</lastmod>
+    <lastmod>2020-11-24T12:16:38+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://indic-dict.github.io/categories/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://indic-dict.github.io/tags/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://indic-dict.github.io/google_site_search/</loc>
-    <lastmod>2019-05-19T11:33:37-07:00</lastmod>
+    <lastmod>2020-11-24T12:16:38+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://indic-dict.github.io/shabda-details/</loc>
-    <lastmod>2020-08-01T18:29:36+05:30</lastmod>
+    <lastmod>2020-11-24T12:16:38+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://indic-dict.github.io/</loc>
-    <lastmod>2019-05-19T11:33:37-07:00</lastmod>
+    <lastmod>2020-11-24T12:16:38+05:30</lastmod>
   </url>
   
 </urlset>
